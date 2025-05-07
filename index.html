@@ -3,8 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./assets/css/resets.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script defer src="./assets/js/index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <h2>Registration Form</h2>
+      <form action="">
+        <label>
+          <span>First name:</span>
+          <input
+            type="text"
+            name="first-name"
+            placeholder="Yourname"
+            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+            autofocus
+            required
+          />
+        </label>
+        <label>
+          <span>Last name:</span>
+          <input
+            type="text"
+            name="last-name"
+            placeholder="YourLastName"
+            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+          />
+        </label>
+        <label>
+          <span>Email:</span>
+          <input type="email" name="email" placeholder="YourEmail" required
+        /></label>
+        <label
+          ><span>Phone:</span
+          ><input
+            type="tel"
+            name="tel"
+            placeholder="+3801923849382"
+            pattern="\+380\d{9}"
+            required
+        /></label>
+        <label
+          ><span>Password:</span>
+          <input
+            type="password"
+            name="password"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&._].*){8,32}"
+            required
+          />
+        </label>
+        <label
+          ><span>Password confirmation:</span>
+          <input
+            type="password"
+            name="password-confirmation"
+            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&._].*){8,32}"
+            required
+          />
+        </label>
+        
+        <button type="submit">Register</button>
+      </form>
+    </main>
+  </body>
 </html>
