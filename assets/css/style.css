@@ -31,15 +31,24 @@ label {
 
 input {
   width: 40%;
+  outline: none;
 }
 
 button {
   width: 100%;
 }
 
-input:valid {
+/*input:valid {
   border: 2px solid purple;
 }
 input:invalid {
   border: 2px solid pink;
+}
+*/
+
+.valid {
+  border: 2px solid green;
+}
+.invalid {
+  border: 2px solid red;
 }
