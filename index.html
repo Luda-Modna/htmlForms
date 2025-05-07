@@ -3,68 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration form</title>
+    <title>Contact form</title>
     <link rel="stylesheet" href="./assets/css/resets.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script defer src="./assets/js/index.js"></script>
   </head>
   <body>
     <main>
-      <h2>Registration Form</h2>
-      <form action="">
+      <h2>Contact Form</h2>
+      <form action="#">
         <label>
-          <span>First name:</span>
-          <input
-            type="text"
-            name="first-name"
-            placeholder="Yourname"
-            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
-            autofocus
-            required
-          />
-        </label>
-        <label>
-          <span>Last name:</span>
-          <input
-            type="text"
-            name="last-name"
-            placeholder="YourLastName"
-            pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
-          />
-        </label>
-        <label>
-          <span>Email:</span>
-          <input type="email" name="email" placeholder="YourEmail" required
-        /></label>
-        <label
-          ><span>Phone:</span
-          ><input
-            type="tel"
-            name="tel"
-            placeholder="+3801923849382"
-            pattern="\+380\d{9}"
-            required
-        /></label>
-        <label
-          ><span>Password:</span>
-          <input
-            type="password"
-            name="password"
-            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&._].*){8,32}"
-            required
-          />
-        </label>
-        <label
-          ><span>Password confirmation:</span>
-          <input
-            type="password"
-            name="password-confirmation"
-            pattern="(?=.*[A-Z].*)(?=.*[a-z].*)(?=.*[!@#$%^&._].*){8,32}"
-            required
-          />
+          <span>Your name</span>
+          <div class="input-container name-container">
+            <input
+              class="nameInput"
+              type="text"
+              name="firstName"
+              placeholder="First name"
+              pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+              autofocus
+              required
+            />
+            <input
+              class="nameInput"
+              type="text"
+              name="lastName"
+              placeholder="Last name"
+              pattern="[A-Z][a-z]{1,19}(-[A-Z][a-z]{1,19})?"
+            />
+          </div>
         </label>
 
-        <button type="submit">Register</button>
+        <label>
+          <span>Email</span>
+          <input
+            class="input-container"
+            type="email"
+            name="email"
+            placeholder="your_email@email.com"
+            required
+          />
+        </label>
+        <label>
+          <span>Phone*</span>
+          <div class="input-container phone">
+            <input
+              type="tel"
+              name="telFirst"
+              placeholder="000"
+              pattern="\d{3}"
+              required
+            />
+            <input
+              type="tel"
+              name="telSecond"
+              placeholder="000"
+              pattern="\d{3}"
+              required
+            />
+            <input
+              type="tel"
+              name="telThree"
+              placeholder="0000"
+              pattern="\d{4}"
+              required
+            />
+          </div>
+        </label>
+        <label>
+          <span>Message subject*</span>
+          <select class="input-container" name="subject" required>
+            <option value="Other">Other</option>
+            <option value="Question" selected>Question</option>
+            <option value="Complaint">Complaint</option>
+          </select>
+        </label>
+        <label>
+          <span>Message*</span>
+          <textarea
+            class="input-container messageTextArea"
+            name="message"
+            id="messageText"
+            maxlength="100"
+            required
+          >
+          </textarea>
+        </label>
+        <div class="form-line"></div>
+        <button type="submit">Submit form</button>
       </form>
     </main>
   </body>
